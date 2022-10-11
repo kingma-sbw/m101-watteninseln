@@ -127,6 +127,11 @@ section:hover {
   scale: 1.05;
   transform: rotate(1deg);
 }
+section p {
+  hyphens: auto;
+  color: rgb(255 255 255 / 80%);
+  text-shadow: 0 0 10px rgba(0,0,0,0.8);
+}
 
 /**
  * section haben eigene Hintegrundbilder
