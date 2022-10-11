@@ -52,6 +52,7 @@ h1, h2 {
  */
 h1 {
   font-size: 1.5rem;
+  color: white;
 }
 h2 {
   font-size: 1.rem;
@@ -79,6 +80,7 @@ main {
   display: flex;
   gap: 30px;
   padding: 0 30px;
+  animation: fly-in 1s;
 }
 footer {
   margin: 20px 0;
@@ -124,6 +126,11 @@ section:hover {
   box-shadow: 0 0 20px yellow;
   scale: 1.05;
   transform: rotate(1deg);
+}
+section p {
+  hyphens: auto;
+  color: rgb(255 255 255 / 80%);
+  text-shadow: 0 0 10px rgba(0,0,0,0.8);
 }
 
 /**
@@ -193,3 +200,19 @@ section a {
   
 }
 
+/**
+ * flyin effect
+ */
+@keyframes fly-in {
+  from {
+    margin-top: -200px;
+    transform: scaleY(0.5);
+    opacity: 0;
+  }
+  to {
+    margin-top: 0;
+    opacity: initial;
+    transform: initial;
+  }
+  
+}
