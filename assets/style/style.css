@@ -1,0 +1,143 @@
+
+
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300&family=Montserrat:wght@100;400&display=swap');
+
+@font-face {
+  font-family: 'Lato';
+  font-style: normal;
+  font-weight: 400;
+  src: url(/assets/fonts/Lato/Lato-Regular.ttf) ;
+}
+@font-face {
+  font-family: 'Lato';
+  font-style: normal;
+  font-weight: 700;
+  src: url(/assets/fonts/Lato/Lato-Bold.ttf);
+}
+
+*,*::after,*::before {
+  padding: 0; 
+  margin: 0;
+  box-sizing: border-box; 
+}
+
+:root {
+  background-color:darkslategray;
+  color: white;
+  font: 15px/1.5em normal, Lato;
+  scroll-behavior: smooth;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+a:hover {
+  border-bottom: 2px solid gray;
+}
+
+h1, h2 {
+  line-height: 200%;
+  font-variant: small-caps;
+}
+h1 {
+  font-size: 1.5rem;
+}
+h2 {
+  font-size: 1.rem;
+}
+nav {
+  display: none;
+}
+nav > ul {
+  list-style: none;
+  display: flex;
+  justify-content: space-evenly;
+}
+nav li {
+  background-color: black;
+  color: white;
+  padding: 10px;
+  border-radius: 8px;
+  border: 1px solid black;
+}
+
+header {
+  font-size: 20px;
+  position:sticky;
+  top:0;
+
+  padding-bottom: 20px;
+  backdrop-filter: blur(20px);
+}
+main {
+  display: flex;
+  gap: 30px;
+  padding: 0 30px;
+}
+
+section {
+  flex: 1 1 0;
+  padding: 10px;
+  color: white;
+  border-radius: 8px;
+
+  background-color: black;
+  background-size:cover;
+  background-repeat: no-repeat;
+
+  transition: scale 0.1s ease-in, box-shadow 1s ease-out, transform 2s ease-out;
+}
+section:hover {
+  box-shadow: 0 0 20px yellow;
+  scale: 1.05;
+  transform: rotate(1deg);
+}
+
+footer {
+  margin: 20px 0;
+  text-align: center;
+}
+section#vlieland {
+  background-image: url(/assets/img/vlieland.jpg);
+}
+section#ameland {
+  background-image: url(/assets/img/ameland.jpg);
+}
+section#terschelling {
+  background-image: url(/assets/img/terschelling.jpg);
+}
+
+
+section a {
+  background-color: green;
+}
+
+#titel {
+  text-align: center;
+}
+#fett{
+  color: black;
+}
+
+@media screen and (max-width: 800px) {
+  body {
+    font-size: 1.3em;
+  }
+  main {
+    flex-direction: column;
+    padding: 0;
+  }
+  section {
+    border-radius: initial;
+  }
+  nav {
+    display: initial;
+  }
+  section:hover {
+    transform: initial;
+    scale: initial;
+    box-shadow: none ;
+  }
+}
+
