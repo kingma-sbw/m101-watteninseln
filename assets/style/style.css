@@ -1,7 +1,6 @@
-
-
-@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300&family=Montserrat:wght@100;400&display=swap');
-
+/**
+ * zwei Schrift-schntte für Lato
+ */
 @font-face {
   font-family: 'Lato';
   font-style: normal;
@@ -14,13 +13,17 @@
   font-weight: 700;
   src: url(/assets/fonts/Lato/Lato-Bold.ttf);
 }
-
+/**
+ * mini reset
+ */
 *,*::after,*::before {
   padding: 0; 
   margin: 0;
   box-sizing: border-box; 
 }
-
+/**
+ * basis design
+ */
 :root {
   background-color:darkslategray;
   color: white;
@@ -28,6 +31,9 @@
   scroll-behavior: smooth;
 }
 
+/**
+ * links haben kein underline, bei hover einen Rand unten
+ */
 a {
   color: inherit;
   text-decoration: none;
@@ -35,20 +41,60 @@ a {
 a:hover {
   border-bottom: 2px solid gray;
 }
-
+/**
+ * Überschriften Kapitälchen, und Zeilenabstand 1.2
+ */
 h1, h2 {
-  line-height: 200%;
+  line-height: 1.2em;
   font-variant: small-caps;
 }
+/**
+ * Überschriften etwas kleine als standard
+ */
 h1 {
   font-size: 1.5rem;
 }
 h2 {
   font-size: 1.rem;
 }
+/**
+ * header
+ *  Überschrift
+ *  navigation
+ * main
+ *   sections
+ * footer
+ */
+header {
+  font-size: 20px;
+  position:sticky;
+  top:0;
+
+  padding-bottom: 20px;
+  backdrop-filter: blur(20px);
+}
+/**
+ * Inhalt von main werden horizental dargestellt
+ */
+main {
+  display: flex;
+  gap: 30px;
+  padding: 0 30px;
+}
+footer {
+  margin: 20px 0;
+  text-align: center;
+}
+
+/**
+ * in pc Ansicht keine Navigation
+ */
 nav {
   display: none;
 }
+/**
+ * Kein bullets, li verteilt
+ */
 nav > ul {
   list-style: none;
   display: flex;
@@ -61,21 +107,10 @@ nav li {
   border-radius: 8px;
   border: 1px solid black;
 }
-
-header {
-  font-size: 20px;
-  position:sticky;
-  top:0;
-
-  padding-bottom: 20px;
-  backdrop-filter: blur(20px);
-}
-main {
-  display: flex;
-  gap: 30px;
-  padding: 0 30px;
-}
-
+/**
+ * sections sind alle gleich breit
+ * sections haben transitions für hovers
+ */
 section {
   flex: 1 1 0;
   padding: 10px;
@@ -94,10 +129,9 @@ section:hover {
   transform: rotate(1deg);
 }
 
-footer {
-  margin: 20px 0;
-  text-align: center;
-}
+/**
+ * section haben eigene Hintegrundbilder
+ */
 section#vlieland {
   background-image: url(/assets/img/vlieland.jpg);
 }
@@ -108,6 +142,9 @@ section#terschelling {
   background-image: url(/assets/img/terschelling.jpg);
 }
 
+/**
+ * links in sections haben einen hintergrund
+ */
 
 section a {
   background-color: green;
@@ -116,14 +153,21 @@ section a {
 #titel {
   text-align: center;
 }
+
 #fett{
   color: black;
 }
 
+/**
+ * breakpoint 800px für tablets/mobiles
+ */
 @media screen and (max-width: 800px) {
   body {
     font-size: 1.3em;
   }
+  /**
+   * sections vertial
+   */
   main {
     flex-direction: column;
     padding: 0;
@@ -139,5 +183,15 @@ section a {
     scale: initial;
     box-shadow: none ;
   }
+}
+/**
+ * breakpoint für super breite bildschirm (Fernsher usw.)
+  */
+@media screen and (min-width:1600px) {
+  main {
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  
 }
 
