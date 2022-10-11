@@ -127,10 +127,15 @@ section:hover {
   scale: 1.05;
   transform: rotate(1deg);
 }
+/**
+ * text in sections ist
+ * Weis 90% durchlässig
+ * hat einen schwarzer Schatten 80% durchlässig
+ */
 section p {
   hyphens: auto;
-  color: rgb(255 255 255 / 80%);
-  text-shadow: 0 0 10px rgba(0,0,0,0.8);
+  color: rgb(255 255 255 / 90%);
+  text-shadow: 0 0 10px rgba(0,0,0,0.5);
 }
 
 /**
