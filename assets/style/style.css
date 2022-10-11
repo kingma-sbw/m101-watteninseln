@@ -26,7 +26,6 @@
  */
 :root {
   background-color:darkslategray;
-  color: white;
   font: 15px/1.5em normal, Lato;
   scroll-behavior: smooth;
 }
@@ -101,8 +100,8 @@ nav > ul {
   justify-content: space-evenly;
 }
 nav li {
-  background-color: black;
-  color: white;
+  background-color: white;
+  color: darkslategray;
   padding: 10px;
   border-radius: 8px;
   border: 1px solid black;
@@ -114,13 +113,11 @@ nav li {
 section {
   flex: 1 1 0;
   padding: 10px;
-  color: white;
   border-radius: 8px;
-
   background-color: black;
   background-size:cover;
+  background-position: 20% 10%;
   background-repeat: no-repeat;
-
   transition: scale 0.1s ease-in, box-shadow 1s ease-out, transform 2s ease-out;
 }
 section:hover {
@@ -184,9 +181,10 @@ section a {
     box-shadow: none ;
   }
 }
+
 /**
  * breakpoint für super breite bildschirm (Fernsher usw.)
-  */
+ */
 @media screen and (min-width:1600px) {
   main {
     max-width: 1200px;
